@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HoaSQLiteApp.PagThemHoa">
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+        <Label Text="Ma Loai" Grid.Column="0" Grid.Row="0" />
+        <Picker Title="Chon Loai Hoa"
+                    x:Name="pickerFlowerType"
+                    SelectedItem="{Binding ID}"  
+                    SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                    ItemDisplayBinding="{Binding TenLoai}" Grid.Column="1" Grid.Row="0"  />
+
+
+        <Label Text="Ten Hoa" Grid.Column="0" Grid.Row="1" />
+        <Entry Grid.Column="1" Grid.Row="1" x:Name="txttenhoa"/>
+
+        <Label Text="Hinh" Grid.Column="0" Grid.Row="2" />
+        <Entry Grid.Column="1" Grid.Row="2" x:Name="txthinh"/>
+
+        <Label Text="Gia Ban" Grid.Column="0" Grid.Row="3" />
+        <Entry Grid.Column="1" Grid.Row="3" x:Name="txtgia"/>
+
+        <Label Text="Mo Ta" Grid.Column="0" Grid.Row="4" />
+        <Entry Grid.Column="1" Grid.Row="4" x:Name="txtmota"/>
+
+        <Button Text="Them hoa" Clicked="Button_Clicked" Grid.Row="5" Grid.Column="0"/>
+        <Button Text="Xoa hoa"  Grid.Row="5" Grid.Column="1"/>
+
+
+
+
+
+
+
+
+
+
+    </StackLayout>
+</ContentPage>
